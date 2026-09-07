@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANDERLUST — Туризм</title>
+<link rel="stylesheet" href="style (5).css">
+</head>
+<body>
+<header>
+ <div class="container nav">
+  <a class="logo" href="#home"><img src="img/иконка1.png" alt=""><span class="logo-text"><b>WANDERLUST</b><small>TRAVEL PLATFORM</small></span></a>
+  <nav class="links"><a class="active" href="#home">Места</a><a href="#explore">Исследовать</a><a href="#trips">Групповые туры</a><a href="#restaurants">Рестораны</a></nav>
+  <div class="nav-actions"><span class="lang">RU ⌄</span><a href="#" onclick="openModal()">Войти</a><button class="btn" onclick="openModal()">Создать новый</button></div>
+ </div>
+</header>
+
+<main id="home">
+<section class="hero">
+ <div class="hero-content">
+  <h1>Начни путешествие уже<br>сейчас!</h1>
+  <p>Открывайте удивительные озера, величественные горы, золотые пляжи и таинственные леса по всему миру.</p>
+  <div class="search"><span class="search-ico">🔍</span><input id="heroSearch" placeholder="Куда вы хотите отправиться? Начните вводить название..." onkeydown="if(event.key==='Enter') searchPlace()"><button class="btn" onclick="searchPlace()">Искать</button></div>
+ </div>
+</section>
+
+<section>
+ <div class="container">
+  <h2 style="font-size:18px;margin:0 0 18px">Популярные категории</h2>
+  <div class="chips">
+   <span class="chip active"><img src="img/пляж2.png" alt="">Озера</span>
+   <span class="chip"><img src="img/пляж2.png" alt="">Пляж</span>
+   <span class="chip"><img src="img/горы3.png" alt="">Горы</span>
+   <span class="chip"><img src="img/леса4.png" alt="">Леса</span>
+  </div>
+  <div class="section-head"><h2>Лучшие места для посещения</h2><a href="#explore">Увидеть все +</a></div>
+  <div class="grid">
+   <article class="card"><div class="card-img" style="background-image:url('img/red.png')"><span class="badge">⭐ 4.5</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">RedFish Lake</div><div class="card-loc">📍 Штат Айдахо, США</div><div class="card-meta"><span>9000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+   <article class="card"><div class="card-img" style="background-image:url('img/maligne.png')"><span class="badge">⭐ 4.7</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">Maligne Lake</div><div class="card-loc">📍 Джаспер, Канада</div><div class="card-meta"><span>9000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+   <article class="card"><div class="card-img" style="background-image:url('img/lake.png')"><span class="badge">⭐ 4.8</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">Lake McDonald</div><div class="card-loc">📍 Монтана, США</div><div class="card-meta"><span>15000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+   <article class="card"><div class="card-img" style="background-image:url('img/Lake Ontario.webp')"><span class="badge">⭐ 4.9</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">Озеро Онтарио</div><div class="card-loc">📍 Граница США и Канада</div><div class="card-meta"><span>15000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section id="trips">
+ <div class="container">
+  <div class="feature">
+   <div class="trip-card">
+    <div class="trip-img" style="background-image:url('img/поездка.png')"></div>
+    <div class="trip-body">
+     <div class="card-title">Поездка в Горы</div>
+     <div class="card-loc">📍 Зелисберг, Норвегия</div>
+     <div class="trip-progress">
+      <div class="avatars"><img src="img/человек 1.png" alt=""><img src="img/человек 2.png" alt=""><img src="img/человек 3.png" alt=""></div>
+      <span class="progress-label">80% Заполнено</span>
+     </div>
+     <div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+     <div class="trip-note">110+ участников уже присоединились</div>
+    </div>
+   </div>
+   <div><div style="color:var(--teal);font-size:12px;font-weight:800">ГРУППОВЫЕ ПРИКЛЮЧЕНИЯ</div><h2>Исследуйте мир в кругу единомышленников</h2><p>Присоединяйтесь к групповым турам, общайтесь с путешественниками, находите друзей и разделяйте незабываемые моменты. Мы берём на себя всю организацию маршрута и трансфера.</p><button class="btn" onclick="openModal()">Найти группу</button></div>
+  </div>
+ </div>
+</section>
+
+<section id="restaurants">
+ <div class="container"><div style="color:var(--teal);font-size:12px;font-weight:800;margin-bottom:6px">РЕСТОРАНЫ ПО ПУТИ</div><div class="section-head"><h2>Где вкусно пообедать</h2><a href="#">Увидеть все рестораны +</a></div>
+ <div class="grid grid-3">
+  <article class="card"><div class="card-img" style="background-image:url('img/ресторан1.png')"></div><div class="card-body"><div class="card-meta" style="margin-bottom:6px"><span class="card-title" style="margin:0">King + Duke</span><span>4.5 ★</span></div><p class="card-desc">Современный американский ресторан в Атланте, построенный вокруг открытого очага с приготовлением на углях. В меню — современная американская кухня с акцентом на блюда, приготовленные на огне.</p></div></article>
+  <article class="card"><div class="card-img" style="background-image:url('img/ресторан2.png')"></div><div class="card-body"><div class="card-meta" style="margin-bottom:6px"><span class="card-title" style="margin:0">Lake View Seafood</span><span>4.8 ★</span></div><p class="card-desc">Свежие морепродукты и изумительный панорамный вид на озеро RedFish. Романтическая атмосфера для ужина на закате.</p></div></article>
+  <article class="card"><div class="card-img" style="background-image:url('img/ресторан3.png')"></div><div class="card-body"><div class="card-meta" style="margin-bottom:6px"><span class="card-title" style="margin:0">La Cabin</span><span>4.6 ★</span></div><p class="card-desc">Традиционные альпийские блюда, согревающий камин и уютная домашняя обстановка для семейного отдыха.</p></div></article>
+ </div></div>
+</section>
+
+<section id="explore">
+ <div class="container">
+ <div class="explore-layout">
+  <aside class="sidebar">
+   <h2 style="margin:0 0 4px;font-size:22px">Исследовать</h2>
+   <p style="color:var(--muted);font-size:12px;margin:0 0 18px">Найдено 12 направлений поблизости</p>
+   <input placeholder="Поиск городов, стран, достопримечательностей">
+   <div style="font-size:11px;color:var(--muted);margin-bottom:8px">ПОПУЛЯРНЫЕ МЕСТА</div>
+   <div class="small-card"><img src="img/торонто канада.png" alt=""><div><b>Торонто, Канада</b><br><small>Расстояние: 12.3 км.</small><div class="small-card-actions"><button class="btn" onclick="openModal()">Начать</button><a href="#" class="card-link">Маршрут +</a></div></div></div>
+   <div style="font-size:11px;color:var(--muted);margin:16px 0 8px">ДРУГИЕ ВАРИАНТЫ</div>
+   <div class="small-card mini"><img src="img/ньюйорк.png" alt=""><div><b>Нью-Йорк, США</b><br><small>24.5 км от вас</small></div></div>
+  </aside>
+  <div class="map" style="background-image:url('img/исследовать.png')">
+   <div class="pin-label here" style="left:12%;top:52%">Торонто <b>(Я здесь)</b></div>
+   <div class="pin-label" style="left:32%;top:16%">⛰ Ниагарский водопад</div>
+   <div class="pin-label" style="left:62%;top:36%">Казахстан</div>
+   <div class="map-zoom"><button onclick="alert('Приближение карты пока в разработке')">+</button><button onclick="alert('Отдаление карты пока в разработке')">−</button></div>
+  </div>
+ </div></div>
+</section>
+
+<section id="place">
+ <div class="container detail">
+  <div class="info">
+   <div class="gallery"><div class="big" style="background-image:url('img/red.png')"></div><div style="background-image:url('img/redfish1.png')"></div><div style="background-image:url('img/redfish2.png')"></div><div style="background-image:url('img/redfish3.png')"></div><div class="more" style="background-image:url('img/redfish4.png')"></div></div>
+   <div class="breadcrumb">Главная <span>›</span> Озера <span>›</span> RedFish Lake</div>
+   <div class="place-title-row"><h1>RedFish Lake</h1><span class="badge">⭐ 4.5</span></div>
+   <div class="card-loc">📍 Штат Айдахо, США</div>
+   <h3>О месте</h3><p class="about">Чем известно озеро RedFish Lake? RedFish Lake - конечная остановка на самом длинном Тихоокеанский лосось обитает в Северной Америке, для чего требуются пловцы на длинные дистанции, такие как Нерка и чавыча, чтобы путешествовать по 900 миль вверх по течению, чтобы вернуться к местам нереста. Озеро получило свое название благодаря обилию ярко-красной нерки, которая когда-то заполняла здешние воды во время нереста. Это место идеально подходит для каякинга, хайкинга и созерцания дикой природы.</p>
+   <h3>Удобства и активности</h3><div class="chips"><span class="chip"> Кемпинг</span><span class="chip"> Рыбалка</span><span class="chip"> Парковка</span><span class="chip"> Аренда лодок</span></div>
+
+   <div class="related">
+    <div class="section-head"><h2 style="font-size:18px">Похожие направления</h2></div>
+    <div class="grid">
+     <article class="card"><div class="card-img" style="background-image:url('img/maligne.png')"><span class="badge">⭐ 4.8</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">Maligne Lake</div><div class="card-loc">📍 Джаспер, Канада</div><div class="card-meta"><span>9000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+     <article class="card"><div class="card-img" style="background-image:url('img/lake.png')"><span class="badge">⭐ 4.8</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">Lake McDonald</div><div class="card-loc">📍 Монтана, США</div><div class="card-meta"><span>9000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+     <article class="card"><div class="card-img" style="background-image:url('img/Lake Ontario.webp')"><span class="badge">⭐ 4.8</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">Озеро Онтарио</div><div class="card-loc">📍 Граница США и Канада</div><div class="card-meta"><span>15000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+     <article class="card"><div class="card-img" style="background-image:url('img/red.png')"><span class="badge">⭐ 4.8</span><button class="like" onclick="toggleLike(this,event)">♡</button></div><div class="card-body"><div class="card-title">Кратерное озеро</div><div class="card-loc">📍 Орегон, США</div><div class="card-meta"><span>15000 /Посещение</span><a class="card-link" href="#place">Подробнее</a></div></div></article>
+    </div>
+   </div>
+  </div>
+  <aside class="booking">
+   <div style="font-size:12px;color:var(--muted)">Стоимость посещения</div><div class="price">15000</div>
+   <label>ДАТА ПОЕЗДКИ</label><div class="input-icon"><input type="text" value="02 сентября, 2026" readonly><span>📅</span></div> 
+   <label>КОЛИЧЕСТВО УЧАСТНИКОВ</label><div class="input-icon"><input type="text" value="2 Гостя" readonly><span>👤</span></div>
+   <div class="total-row">Итого к оплате <span>30000</span></div>
+   <button class="btn" onclick="book()">Забронировать</button>
+  </aside>
+ </div>
+</section>
+</main>
+
+<footer><div class="container"><div class="footer-grid"><div><h3>WANDERLUST</h3><p>Начни путешествие уже сейчас! Мы объединяем лучшие направления, проверенные отзывы и комфортное бронирование групповых и индивидуальных поездок.</p></div><div><h3>Разделы</h3><a href="#home">Места</a><a href="#explore">Исследовать</a><a href="#trips">Групповые туры</a><a href="#restaurants">Рестораны</a></div><div><h3>Помощь</h3><a href="#">Служба поддержки</a><a href="#">Правила бронирования</a><a href="#">Вопросы и ответы</a><a href="#">Условия использования</a></div><div><h3>Контакты</h3><p>support@wanderlust.ru<br>+7 (495) 123-45-67</p></div></div><div class="copy"><span>© 2026 Wanderlust. Все права защищены.</span><span class="copy-links"><a href="#">Политика конфиденциальности</a><a href="#">Cookie-файлы</a></span></div></div></footer>
+
+<div class="modal" id="modal"><div class="modal-box"><span class="close" onclick="closeModal()">×</span><h2>Добро пожаловать!</h2><p style="color:var(--muted)">Войдите, чтобы продолжить путешествие.</p><input placeholder="Email"><input type="password" placeholder="Пароль"><button class="btn" style="width:100%;margin-top:8px" onclick="closeModal()">Войти</button></div></div>
+<script src="script.js"></script>
+</body></html>
